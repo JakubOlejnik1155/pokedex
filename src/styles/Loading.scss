@@ -1,0 +1,37 @@
+@import './variables.scss';
+@import './media.scss';
+.loadingContainer{
+    background-image: url('../images/pokemonBackground.png');
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    display: flex;
+    flex-grow: 1;
+    background-color: #82b072;
+    justify-content: center;
+    align-items: center;
+
+    @include MQ (desctop-small){
+       margin-left: 300px;
+    }
+
+    div{
+        text-align: center;
+    }
+    img{
+        width: 60px;
+        height: 60px;
+        animation: loading 4s infinite linear;
+    }
+    p{
+        margin-top: 5px;
+        font-size: $bigMobilefont;
+        font-weight: bold;
+        font-style: italic;
+    }
+}
+@keyframes loading {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}

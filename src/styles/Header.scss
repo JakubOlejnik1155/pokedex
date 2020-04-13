@@ -1,0 +1,53 @@
+@import './variables.scss';
+@import './media.scss';
+.header{
+    background-color: #434a54;
+    border-bottom: 2px solid $pokeballRedColor;
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 999;
+    @include MQ(tablet){
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
+.logoContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__text{
+        word-spacing: -10px;
+        color: white;
+        font-size: $bigMobilefont*1.1;
+        font-family: $pokemonStyleFont;
+    }
+    &__img{
+        height: 40px;
+        width: 40px;
+        transition: all .4s linear;
+        margin-right: 10px;
+        &:hover{
+            transform: rotate(45deg);
+        }
+    }
+}
+.inputContainer{
+    &__input{
+        border: 2px solid $pokeballRedColor;
+        border-radius: 5px;
+        font-size: $smallMobilefont;
+        padding:  5px 10px;
+        transition: border-color 0.3s ease;
+        &:focus{
+            outline: none;
+        }
+        @include MQ(tablet){
+            font-size: $bigMobilefont;
+        }
+    }
+}

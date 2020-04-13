@@ -1,0 +1,17 @@
+@import './media.scss';
+.PokemonListContainer{
+    background-image: url('../images/pokemonBackground.png');
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    flex-grow: 1;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    @include MQ (desctop-small){
+        margin-left: 300px;
+    }
+}

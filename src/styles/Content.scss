@@ -1,0 +1,13 @@
+@import './media.scss';
+.Content{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    margin-top: 95.5px;
+    @include MQ(tablet){
+        margin-top: 63.5px ;
+    }
+    @include MQ (desctop-small){
+        flex-direction: row;
+    }
+}

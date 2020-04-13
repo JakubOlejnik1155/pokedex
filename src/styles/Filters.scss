@@ -1,0 +1,151 @@
+@import './media.scss';
+@import './variables.scss';
+.filtersContainer{
+    background-color: rgb(67, 74, 84);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @include MQ (desctop-small){
+        position: fixed;
+        height: 100%;
+        flex-basis: 300px;
+        min-width: 300px;
+    }
+
+     .types{
+        text-align: center;
+        &__txt{
+            color: white;
+            margin: 15px 0 5px 0;
+        }
+    }
+    .select{
+        position: relative;
+        margin: 0 auto;
+        width: 100px;
+        &::after{
+            display: block;
+            content: '\25BC';
+            color: $pokeballRedColor;
+            line-height: 28px;
+            position: absolute;
+            top: 10px;
+            bottom: 15px;
+            right: 0px;
+            width: 30px;
+            background: #e4e4e4;
+            cursor:pointer;
+            pointer-events:none;
+            transition:.25s all ease;
+            border-radius: 0 5px 5px 0;
+        }
+    }
+    .typeSelect{
+        width: 100%;
+        cursor: pointer;
+        padding: 5px 10px;
+        padding-right: 30px;
+        margin: 10px 0 15px 0;
+        background-color: $pokeballRedColor;
+        border: none;
+        border-radius: 5px;
+        color: white;
+        font-weight: bold;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        outline:0;
+        box-shadow:none;
+        border:0!important;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+    &__filters{
+        flex-grow: 1;
+    }
+    &__buttonGroup{
+        align-self: center;
+        justify-self: flex-end;
+
+         @include MQ (desctop-small){
+            justify-self: flex-end;
+            margin-bottom: 80px;
+        }
+    }
+    &__currentPage{
+         padding: 5px 10px;
+        font-size: $smallMobilefont;
+        background-color: lighten(#434a54, 20%);
+        color: white;
+        border: none;
+        outline: none;
+        text-transform: uppercase;
+    }
+    &__previousBtn,
+    &__nextBtn{
+        min-width: 80px;
+        font-size: $smallMobilefont;
+        font-weight: bold;
+        color: white;
+        border: none;
+        outline: none;
+        padding: 5px 10px;
+        background-color: $pokeballRedColor;
+        transition: all linear .2s;
+        &:hover{
+            cursor: pointer;
+            background-color: darken($pokeballRedColor, 5%);
+        }
+
+    }
+    &__previousBtn{
+        border-right: 1px solid white;
+        border-radius: 5px 0 0 5px;
+         &--none{
+            border-radius: 5px 0 0 5px;
+            font-size: $smallMobilefont;
+            color: rgb(97, 96, 96);
+            font-weight: bold;
+            border: none;
+            outline: none;
+            padding: 5px 10px;
+            transition: all linear .2s;
+            background-color: #ddd;
+            &:hover{
+                background-color: #ddd;
+                cursor: unset;
+            }
+        }
+    }
+    &__nextBtn{
+        border-left: 1px solid white;
+        border-radius:  0 5px 5px 0;
+         &--none{
+            font-size: $smallMobilefont;
+            color: rgb(97, 96, 96);
+            font-weight: bold;
+            border: none;
+            border-radius: 0 5px 5px 0;
+            outline: none;
+            padding: 5px 10px;
+            transition: all linear .2s;
+            background-color: #ddd;
+            &:hover{
+                background-color: #ddd;
+                cursor: unset;
+            }
+        }
+    }
+}

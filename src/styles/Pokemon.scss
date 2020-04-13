@@ -1,0 +1,116 @@
+@import './variables';
+.pokemonContainer{
+    background-color: rgba(78, 78, 78, 0.76);
+    border-radius: 5px;
+    border: 1px solid #101010;
+    min-height: 70px;
+    margin: 10px;
+    flex-basis: 300px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all .2s linear;
+    position: relative;
+
+     &__id{
+        font-size: $smallMobilefont * .9;
+        position: absolute;
+        top: 3px;
+        left: 5px;
+        span{
+            font-weight: bold;
+        }
+        font-style: italic;
+    }
+        &__img{
+        width: 100px;
+        height: 100px;
+        pointer-events: none;
+        user-select: none;
+    }
+    &__name{
+        font-size: 1.2*$bigMobilefont;
+        font-style: italic;
+        margin: 0;
+        text-transform:capitalize;
+    }
+    &__types{
+        position: absolute;
+        top: 3px;
+        right: 0;
+        display: flex;
+        flex-direction: row-reverse;
+        div{
+            background-color: rgb(238, 255, 0);
+            font-size: $smallMobilefont * 0.8;
+            margin: 3px;
+            padding: 0px 7px ;
+            border-radius: 50px;
+        }
+
+        .normal{
+            background-color: $normal;
+        }
+        .fighting{
+            background-color: $fighting;
+        }
+        .flying{
+            background-color: $flying;
+        }
+        .poison{
+            background-color: $poison;
+        }
+        .ground{
+            background-color: $ground;
+        }
+        .rock{
+            background-color: $rock;
+        }
+        .bug{
+            background-color: $bug;
+        }
+        .ghost{
+            background-color: $ghost;
+        }
+        .steel{
+            background-color: $steel;
+        }
+        .fire{
+            background-color: $fire;
+        }
+        .water{
+            background-color: $water;
+        }
+        .grass{
+            background-color: $grass;
+        }
+        .electric{
+            background-color: $electric;
+        }
+        .psychic{
+            background-color: $psychic;
+        }
+        .ice{
+            background-color: $ice;
+        }
+        .dragon{
+            background-color: $dragon;
+        }
+        .dark{
+            color: whitesmoke;
+            background-color: $dark;
+        }
+        .fairy{
+            background-color: $fairy;
+        }
+        .unknown{
+            background-color: $unknown;
+        }
+        .shadow{
+            background-color: $shadow;
+        }
+    }
+
+}
