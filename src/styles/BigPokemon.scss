@@ -1,0 +1,108 @@
+@import './media.scss';
+@import './variables.scss';
+.bigPokemonContainer{
+    flex-grow: 1;
+    background-image: url('../images/pokemonBackground.png');
+    background-attachment: fixed;
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 95.5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include MQ(tablet){
+        margin-top: 63.5px ;
+    }
+    @include MQ (desctop-small){
+        flex-direction: row;
+    }
+    .pokemon{
+        position: relative;
+        border-radius: 5px;
+        border: 1px solid black;
+        width: 80%;
+        max-width: 1200px;
+        height:  600px;
+        background-color: rgba(39, 69, 94, 0.795);
+        margin-top: 20px;
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .pokemonContainer__id{
+            font-size: $bigMobilefont;
+            margin-left: 5px;
+            button{
+                display: block;
+                padding: 5px 10px;
+                color: white;
+                margin: 5px 0 5px 0;
+                font-weight: bold;
+                border: none;
+                outline: none;
+                border-radius: 5px;
+                background-color: $pokeballRedColor;
+                transition: all .3s linear;
+                &:hover{
+                    cursor: pointer;
+                    background-color: darken($pokeballRedColor, 15%);
+                }
+            }
+        }
+        .pokemonContainer__types{
+            right: 10px;
+            div{
+                font-size: $bigMobilefont;
+            }
+        }
+
+
+
+        .photoAndName{
+            flex-grow: 1;
+            text-align: center;
+            img{
+                width: 180px;
+                height: 180px;
+            }
+        }
+        .pokemonName{
+            font-family: $pokemonStyleFont;
+            font-size: $bigMobilefont*1.2;
+            letter-spacing: -1px;
+        }
+
+
+        .abilities{
+            flex-grow: 1;
+            text-align: center;
+            font-weight: bold;
+            h3{
+                font-size: $bigMobilefont*1.1;
+                color: yellow;
+            }
+        }
+        .stats{
+            flex-grow: 2;
+            line-height: 1.5;
+            padding-left: 10%;
+            padding-right: 10%;
+            h3{
+                font-size: $bigMobilefont*1.1;
+                color: rgb(0, 238, 255);
+            }
+            p{
+                font-weight: bold;
+            }
+            span{
+                color: white;
+            }
+        }
+
+
+
+
+
+    }
+}

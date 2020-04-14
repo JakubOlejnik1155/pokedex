@@ -14,10 +14,20 @@
     transition: all .2s linear;
     position: relative;
 
+    &:hover{
+        cursor: pointer;
+        background-color: darken(rgba(78, 78, 78, 0.76), 10%);
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
+
+
+
      &__id{
         font-size: $smallMobilefont * .9;
         position: absolute;
         top: 3px;
+        user-select: none;
         left: 5px;
         span{
             font-weight: bold;
@@ -35,6 +45,7 @@
         font-style: italic;
         margin: 0;
         text-transform:capitalize;
+        user-select: none;
     }
     &__types{
         position: absolute;
@@ -48,6 +59,7 @@
             margin: 3px;
             padding: 0px 7px ;
             border-radius: 50px;
+            user-select: none;
         }
 
         .normal{

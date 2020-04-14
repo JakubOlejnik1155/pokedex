@@ -17,6 +17,7 @@ const Content = (props) => {
           <Loading />
         ) : (
           <PokeList
+            setBigPokemon={props.setBigPokemon}
             pokeArray={props.pokeArray}
             currentPage={props.currentPage}
           />

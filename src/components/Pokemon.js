@@ -1,7 +1,7 @@
 import React from 'react';
 import '../styles/Pokemon.scss';
 
-const Pokemon = ({pokemon}) => {
+const Pokemon = ({pokemon, setBigPokemon}) => {
 
     const typesArray = (array) =>{
          return array.map((element) => (
@@ -10,9 +10,12 @@ const Pokemon = ({pokemon}) => {
            </div>
          ));
     };
+    const BigPoke = () => {
+      setBigPokemon(pokemon);
+    };
 
     return (
-      <div className="pokemonContainer">
+      <div className="pokemonContainer" onClick={BigPoke}>
         <div className="pokemonContainer__id">
           <span>ID: </span>#{pokemon.id}
         </div>

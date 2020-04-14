@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Header from './Header';
 import Content from './Content';
+import BigPokemon from "./BigPokemon";
 import '../styles/WrapperContent.scss';
 
 const WrapperContent = () => {
@@ -11,6 +12,7 @@ const WrapperContent = () => {
     const [currentPage, setCurrentPage] = useState(1);
     const [typeFilter, setTypeFilter] = useState('all');
     const [filteredArray, setFilteredArray] = useState(null);
+    const [bigPokemon, setBigPokemon] = useState(null);
 
     useEffect(() => {
         getData()
@@ -71,14 +73,23 @@ const WrapperContent = () => {
     return (
       <div className="wrapper">
         <Header searchValue={searchValue} setSearchValue={setSearchValue} />
-        <Content
-          isLoading={isLoading}
-          pokeArray={filteredArray}
-          currentPage={currentPage}
-          setCurrentPage={setCurrentPage}
-          typeFilter={typeFilter}
-          setTypeFilter={setTypeFilter}
-        />
+        {bigPokemon === null ? (
+             <Content
+                isLoading={isLoading}
+                pokeArray={filteredArray}
+                currentPage={currentPage}
+                setCurrentPage={setCurrentPage}
+                typeFilter={typeFilter}
+                setTypeFilter={setTypeFilter}
+                setBigPokemon={setBigPokemon}
+            />
+        ) : (
+            <BigPokemon
+                pokemon={bigPokemon}
+                setBigPokemon={setBigPokemon}
+            />
+        )}
+
       </div>
     );
 };
