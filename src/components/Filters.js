@@ -36,7 +36,6 @@ const filters = ({currentPage, pokeArray, setCurrentPage, typeFilter, setTypeFil
            setCurrentPage(currentPage + 1);
     };
 
-
     return (
       <div className="filtersContainer">
         <div className="filtersContainer__filters">
@@ -52,7 +51,6 @@ const filters = ({currentPage, pokeArray, setCurrentPage, typeFilter, setTypeFil
               >
                 {typeArray.map((type) => (
                   <option key={type} value={type}>
-
                     {type}
                   </option>
                 ))}
@@ -66,35 +64,19 @@ const filters = ({currentPage, pokeArray, setCurrentPage, typeFilter, setTypeFil
               Go to {currentPage - 1}
             </button>
           ) : (
-            <button
-              className="filtersContainer__previousBtn"
-              onClick={() => {
-                pageBack();
-              }}
-            >
+            <button className="filtersContainer__previousBtn" onClick={() => {pageBack()}}>
               Go to {currentPage - 1}
             </button>
           )}
           <button className="filtersContainer__currentPage">
             {currentPage}
           </button>
-          {pokeArray &&
-          currentPage !== Math.floor(pokeArray.length / 20) + 1 ? (
-            <button
-              className="filtersContainer__nextBtn"
-              onClick={() => {
-                pageForward();
-              }}
-            >
-              Go to {currentPage + 1}
-            </button>
+          {pokeArray && currentPage !== Math.floor(pokeArray.length / 20) + 1 ? (
+              <button className="filtersContainer__nextBtn" onClick={() => {pageForward()}}>
+                Go to {currentPage + 1}
+              </button>
           ) : (
-            <button
-              className="filtersContainer__nextBtn--none"
-              onClick={() => {
-                pageForward();
-              }}
-            >
+            <button className="filtersContainer__nextBtn--none" onClick={() => {pageForward()}}>
               Go to {currentPage + 1}
             </button>
           )}

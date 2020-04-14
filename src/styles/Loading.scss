@@ -10,11 +10,9 @@
     flex-grow: 1;
     justify-content: center;
     align-items: center;
-
     @include MQ (desctop-small){
        margin-left: 300px;
     }
-
     div{
         text-align: center;
     }

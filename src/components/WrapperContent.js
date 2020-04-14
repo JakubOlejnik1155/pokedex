@@ -72,7 +72,16 @@ const WrapperContent = () => {
     };
     return (
       <div className="wrapper">
-        <Header searchValue={searchValue} setSearchValue={setSearchValue} />
+        <Header
+            searchValue={searchValue}
+            setSearchValue={setSearchValue}
+                setIsLoading={setIsLoading}
+                setPokeArray={setPokeArray}
+                setCurrentPage={setCurrentPage}
+                setTypeFilter={setTypeFilter}
+                setFilteredArray={setFilteredArray}
+                setBigPokemon={setBigPokemon}
+            />
         {bigPokemon === null ? (
              <Content
                 isLoading={isLoading}

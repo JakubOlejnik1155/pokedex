@@ -1,5 +1,6 @@
 import React from 'react';
 import '../styles/Pokemon.scss';
+import noPhoto from '../images/npPhoto.png';
 
 const Pokemon = ({pokemon, setBigPokemon}) => {
 
@@ -24,13 +25,12 @@ const Pokemon = ({pokemon, setBigPokemon}) => {
         </div>
         <img
           className="pokemonContainer__img"
-          src={pokemon.sprites.front_default}
+          src={pokemon.sprites.front_default !== null ? pokemon.sprites.front_default : noPhoto }
           alt="poke-img"
         />
         <p className="pokemonContainer__name">
           {pokemon.name}
         </p>
-
       </div>
     );
 }

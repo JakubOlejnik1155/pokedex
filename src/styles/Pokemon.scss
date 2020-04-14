@@ -13,16 +13,11 @@
     justify-content: center;
     transition: all .2s linear;
     position: relative;
-
     &:hover{
         cursor: pointer;
         background-color: darken(rgba(78, 78, 78, 0.76), 10%);
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     }
-
-
-
-
      &__id{
         font-size: $smallMobilefont * .9;
         position: absolute;
@@ -61,7 +56,6 @@
             border-radius: 50px;
             user-select: none;
         }
-
         .normal{
             background-color: $normal;
         }
@@ -124,5 +118,4 @@
             background-color: $shadow;
         }
     }
-
 }

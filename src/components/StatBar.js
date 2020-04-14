@@ -27,7 +27,6 @@ const StatBar = ({stat}) => {
           <div
             className={`statValue ${stat.stat.name}-value`}
             style={{
-            //   width: `${stat.base_stat < 100 ? stat.base_stat : "100"}%`,
             width:"0px",
             backgroundColor: "#ed5564",
               height: "1rem",

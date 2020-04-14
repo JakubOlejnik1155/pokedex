@@ -1,4 +1,5 @@
 import React from 'react';
+import noPhoto from '../images/npPhoto.png';
 import '../styles/BigPokemon.scss';
 import StatBar from './StatBar';
 const BigPokemon = ({pokemon, setBigPokemon}) => {
@@ -16,9 +17,6 @@ const BigPokemon = ({pokemon, setBigPokemon}) => {
         setBigPokemon(null);
     };
 
-
-
-
     const skils = () => {
       return pokemon.abilities.map((element) => (
         <p className="ability" key={element.ability.name}>
@@ -31,11 +29,6 @@ const BigPokemon = ({pokemon, setBigPokemon}) => {
         <StatBar key={stat.stat.name} stat={stat}/>
       ));
     };
-
-
-
-
-
 
     return (
       <div className="bigPokemonContainer">
@@ -52,7 +45,7 @@ const BigPokemon = ({pokemon, setBigPokemon}) => {
 
           <div className="photoAndName">
             <img
-              src={pokemon.sprites.front_default}
+              src={pokemon.sprites.front_default !== null ? pokemon.sprites.front_default : noPhoto}
               alt="pokemon_photo"
             />
             <h1 className="pokemonName">
@@ -73,8 +66,6 @@ const BigPokemon = ({pokemon, setBigPokemon}) => {
             <h3> Stats:</h3>
             {stats()}
         </div>
-
-
 
         </div>
       </div>
